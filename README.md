@@ -27,16 +27,16 @@ Note: This line may vary depending on your distro, but remember: just append `lo
 
 Command line software like `host` and `dig` won't resolve the address, but `getent` will. Thus:
 
-    $ getent hosts myapp.local
-    ::1             myapp.local
+    $ getent hosts myapp.app
+    ::1             myapp.app
 
-    $ getent hosts acme.local
-    ::1             acme.local
+    $ getent hosts acme.app
+    ::1             acme.app
 
 
 ## Custom TLDs
 
-By default, `localtld` will resolve all domains ending in `.local` to localhost. Change this by exporting an environment variable named `LOCALTLD`. Example:
+By default, `localtld` will resolve all domains ending in `.app` to localhost. Change this by exporting an environment variable named `LOCALTLD`. Example:
 
     export LOCALTLD=dev
 

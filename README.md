@@ -18,9 +18,11 @@ then edit `/etc/nsswitch.conf` file
 
 appending `localtld` to the end of the line containing `hosts:`. You'll get something like:
 
-    hosts: files dns localtld
+    hosts: files localtld dns
 
-Note: This line may vary depending on your distro, but remember: just append `localtld` or place `localtld` before `dns`.
+> Note: This line may vary depending on your distro, but remember: just append `localtld` or place `localtld` before `dns` (later is recommended to avoid slowness caused by DNS resolution).
+
+Finally, restart your browser after editing `/etc/nsswitch.conf`.
 
 
 ## Test usage

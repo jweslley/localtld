@@ -29,18 +29,18 @@ Finally, restart your browser after editing `/etc/nsswitch.conf`.
 
 Command line software like `host` and `dig` won't resolve the address, but `getent` will. Thus:
 
-    $ getent hosts myapp.app
-    ::1             myapp.app
+    $ getent hosts myapp.dev
+    ::1             myapp.dev
 
-    $ getent hosts acme.app
-    ::1             acme.app
+    $ getent hosts acme.dev
+    ::1             acme.dev
 
 
 ## Custom TLDs
 
-By default, `localtld` will resolve all domains ending in `.app` to localhost. Change this by exporting an environment variable named `LOCALTLD`. Example:
+By default, `localtld` will resolve all domains ending in `.dev` to localhost. Change this by exporting an environment variable named `LOCALTLD`. Example:
 
-    export LOCALTLD=dev
+    export LOCALTLD=app
 
 
 Also, you can resolve multiple domains to localhost by setting `LOCALTLD` a comma-separated list of top-level domains.

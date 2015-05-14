@@ -57,7 +57,7 @@ _nss_localtld_gethostbyname2_r(const char *name,
     char *env = getenv("LOCALTLD");
     char *domains;
     if (env == NULL) {
-        domains = strdup("app");
+        domains = strdup("dev");
     } else {
         domains = strdup(env);
     }
